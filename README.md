@@ -7,3 +7,9 @@ inspired by [zsh-ssh-tmux](https://github.com/SnakebiteEF2000/zsh-ssh-tmux)
 ## Usage
 
 Prefix + e
+
+## Install via TPM
+
+```
+set -g @plugin 'cdpb/tmux-ssh'
+```
