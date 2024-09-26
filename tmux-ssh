@@ -21,7 +21,7 @@ ssh-tmux(){
     host = $2
     desc = ""
     for (i=3; i<=NF; i++) desc = desc " " $i
-    if (host != "*") print host "\t" desc
+    if (host !~ "*") print host "\t" desc
     }' $(sshconfigs) | fzf-tmux -p --reverse -1 -0 +m +s --query "$LBUFFER" --prompt="SSH Host > " | cut -f1)
 
   if [ -n "$selected_host" ]; then
